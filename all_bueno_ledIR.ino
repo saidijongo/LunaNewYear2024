@@ -37,7 +37,7 @@ const int numPumps = sizeof(motorPins) / sizeof(motorPins[0]);
 bool isReverse = true;
 
 unsigned long pumpStartTimes[numPumps] = {0};
-unsigned long pumpRunTimes[numPumps] = {0}; // Store individual run times for each pump
+unsigned long pumpRunTimes[numPumps] = {0}; // run times store for each pump
 unsigned long lastPumpEndTime = 0; // Variable to store the end time of the last pump
 // Find the maximum runTime for param2 values.
 int maxRunTime = 0;
