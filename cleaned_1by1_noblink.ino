@@ -230,10 +230,10 @@ void processCommand(String command) {
 // Function to Blink LEDs
 void blinkLEDs() {
   for (int i = 0; i < NUM_LEDS; i++) {
-    leds[i] = CRGB::White;
+    leds[i] = CRGB::Green;
   }
   FastLED.show();
-  delay(100);
+  delay(2000);
   fill_solid(leds, NUM_LEDS, CRGB::Black);
   FastLED.show();
   delay(100);
@@ -259,7 +259,7 @@ void ledStrip(int speed, int runTime) {
       leds[i] = CRGB::Red;
     }
     FastLED.show();
-    delay(2000);
+    //delay(2000);
   }
 
   unsigned long startTime = millis();
@@ -279,7 +279,3 @@ void runServo(int angle, int runSpeed) {
   delay(runSpeed);
   myServo.detach();
 }
-
-
-//"(REVERSE_PUMPMOTOR_OPERATION 1647eba3-a6b0-42a7-8a08-ffef8ab07065),(54,1000),(55,3500),(56,2600),(57,1000),(58,2500),(59,4000),(59,1000),(60,5500),(61,500),(62,3600),(64,1000),(65,2500),(66,4000),(67,1000),(68,5500),(69,5000),(70,3600),(71,2000),(75,2500),(80,4000),(83,1000),(78,5500)"
-//"(PUMPMOTOR_OPERATION 1647eba3-a6b0-42a7-8a08-ffef8ab07065),(54,1000),(55,3500),(56,2600),(57,1000),(58,2500),(59,4000),(59,1000),(60,5500),(61,500),(62,3600),(64,1000),(65,2500),(66,4000),(67,1000),(68,5500),(69,5000),(70,3600),(71,2000),(75,2500),(80,4000),(83,1000),(78,5500)"
