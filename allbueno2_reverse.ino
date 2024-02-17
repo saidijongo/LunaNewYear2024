@@ -1,10 +1,11 @@
+
 #include <Arduino.h>
 #include <FastLED.h>
 #include <elapsedMillis.h>
 #include <Servo.h>
 
 #define LED_PIN 11
-#define NUM_LEDS 15
+#define NUM_LEDS 32
 
 CRGB leds[NUM_LEDS];
 
@@ -87,6 +88,7 @@ void runPumps(int pumpNumber, int runTime)
   pumpStartTimes[pumpNumber - 54] = millis();
   pumpRunTimes[pumpNumber - 54] = runTime; // Store individual run time for this pump
 
+  
   // Calculate last pump end time considering all pump run times
   lastPumpEndTime = millis();
   for (int i = 0; i < numPumps; i++)
@@ -135,6 +137,7 @@ void roundStrip(int speed, int runTime) {
   FastLED.show();
   stripRunning = false; //stop iterations
 }
+
 
 
 void movingRainbowEffect(unsigned long speed, int ledStripState) {
